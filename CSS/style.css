@@ -1,0 +1,118 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("../images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 50px;
+    background-color: hsl(257, 40%, 49%);
+    font-family: 'Open Sans', sans-serif;
+}
+.logo {
+    margin: 20px;
+}
+section {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    display: flex;
+}
+section article {
+    color: #fff;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+section article h1 {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+section article p {
+    margin-top: 20px;
+}
+section article p + a {
+    display: flex;
+    width: 170px;
+    padding: 12px;
+    background-color: #fff;
+    color: #000;
+    justify-content: center;
+    align-content: center;
+    border-radius: 20px;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, .2);
+    text-decoration: none;
+    margin-top: 20px;
+}
+section article p + a:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+}
+footer {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+footer a.icon {
+    display: inline-block;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+}
+footer a.icon::before {
+    color: #fff;
+    font-weight: 500;
+    font-family: "Font Awesome 5 Brands";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+footer a:nth-child(1)::before {
+    content: '\f39e';
+}
+footer a:nth-child(2)::before {
+    content: '\f099';
+}
+footer a:nth-child(3)::before {
+    content: '\f16d';
+}
+footer a.icon:hover {
+    border-color: hsl(300, 69%, 71%);
+}
+footer a.icon:hover::before {
+    color: hsl(300, 69%, 71%);
+}
+@media (max-width: 768px) {
+    body {
+        background-image: url("../images/bg-mobile.svg");
+    }
+    section {
+        flex-direction: column;
+    }
+    article {
+        justify-content: center;
+        align-items: center;
+    }
+    section article p {
+        width: 300px;
+    }
+    footer {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
